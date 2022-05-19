@@ -29,10 +29,10 @@ rules:
   - create
 
 ##
-## Rules for charts.truefoundry.io/v1alpha1, Kind: Workspace
+## Rules for components.truefoundry.io/v1alpha1, Kind: Workspace
 ##
 - apiGroups:
-  - charts.truefoundry.io
+  - components.truefoundry.io
   resources:
   - workspaces
   - workspaces/status
