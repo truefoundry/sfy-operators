@@ -1,4 +1,4 @@
-name: Build and publish workspace operator
+name: Build and publish sfy operators
 on:
   push:
     branches:
