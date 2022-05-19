@@ -15,6 +15,10 @@ jobs:
       - name: Set repository name
         run: |
           echo "REPOSITORY_NAME=$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $2}' | sed -e "s/:refs//")" >> $GITHUB_ENV
+      - name: Set repo tag value
+        run: |
+          echo "GITHUB_REF is $GITHUB_REF"
+          echo "GIT_TAG=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
       - name: Set docker repo name
         run: |
           echo "repository name is $REPOSITORY_NAME"
@@ -29,7 +33,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ env.DOCKER_REPO }}:${{ env.GITHUB_SHA }}
+          tags: ${{ env.DOCKER_REPO }}:${{ env.GIT_TAG }}
           cache-from: type=registry,ref=${{ env.DOCKER_REPO }}:buildcache
           cache-to: type=registry,ref=${{ env.DOCKER_REPO }}:buildcache,mode=max
       
