@@ -1,8 +1,8 @@
 name: Build and publish sfy operators
 on:
   push:
-    branches:
-      - main
+    tags:
+      - *
 
 env:
   GITHUB_SHA: ${{ github.sha }}
