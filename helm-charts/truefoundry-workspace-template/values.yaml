@@ -1,0 +1,6 @@
+dockerHubCreds: dummy
+istioInjection: "enabled"
+resourceQuota:
+  limitsCpu: 10
+  limitsMemory: 10Gi
+  services: 10

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: {{ .Release.Name }}
+  labels:
+    {{- if eq .Values.istioInjection "enabled" }}
+    istio-injection: enabled
+    {{- end }}
+  annotations:
+    k8s.titansoft.com/imagepullsecret-patcher-exclude: "true"

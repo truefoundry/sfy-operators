@@ -1,0 +1,14 @@
+apiVersion: charts.truefoundry.io/v1alpha1
+kind: Workspace
+metadata:
+  name: workspace-sample
+spec:
+  # Default values copied from <project_dir>/helm-charts/truefoundry-workspace-template/values.yaml
+  dockerHubCreds: dummy
+  istioInjection: enabled
+  resourceQuota:
+    limitsCpu: 10
+    limitsMemory: 10Gi
+    services: 10
+  
+  

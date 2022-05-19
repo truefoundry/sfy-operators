@@ -1,0 +1,76 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+##
+## Base operator rules
+##
+# We need to get namespaces so the operator can read namespaces to ensure they exist
+- apiGroups:
+  - ""
+  resources:
+  - namespaces
+  verbs:
+  - get
+# We need to manage Helm release secrets
+- apiGroups:
+  - ""
+  resources:
+  - secrets
+  verbs:
+  - "*"
+# We need to create events on CRs about things happening during reconciliation
+- apiGroups:
+  - ""
+  resources:
+  - events
+  verbs:
+  - create
+
+##
+## Rules for charts.truefoundry.io/v1alpha1, Kind: Workspace
+##
+- apiGroups:
+  - charts.truefoundry.io
+  resources:
+  - workspaces
+  - workspaces/status
+  - workspaces/finalizers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- verbs:
+  - "*"
+  apiGroups:
+  - ""
+  resources:
+  - "namespaces"
+- verbs:
+  - "*"
+  apiGroups:
+  - "networking.k8s.io"
+  resources:
+  - "networkpolicies"
+- verbs:
+  - "*"
+  apiGroups:
+  - ""
+  resources:
+  - "limitranges"
+  - "resourcequotas"
+  - "secrets"
+  - "serviceaccounts"
+- verbs:
+  - "*"
+  apiGroups:
+  - "rbac.authorization.k8s.io"
+  resources:
+  - "rolebindings"
+
+#+kubebuilder:scaffold:rules
