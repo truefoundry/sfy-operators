@@ -1,0 +1,16 @@
+apiVersion: components.truefoundry.io/v1alpha1
+kind: Service
+metadata:
+  name: service-sample
+spec:
+  # Default values copied from <project_dir>/helm-charts/truefoundry-service-template/values.yaml
+  ephemeralStorage: 1Gi
+  ephemeralStorageLimit: 1Gi
+  hostUrl: ""
+  image: ""
+  managedBy: servicefoundry
+  port: 5000
+  replicas: 2
+  secretData: '{}'
+  
+  

@@ -3,4 +3,5 @@
 # It should be run by config/default
 resources:
 - bases/components.truefoundry.io_workspaces.yaml
+- bases/components.truefoundry.io_services.yaml
 #+kubebuilder:scaffold:crdkustomizeresource

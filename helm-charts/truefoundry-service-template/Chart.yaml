@@ -1,0 +1,6 @@
+apiVersion: v2
+description: Truefoundry service template chart
+maintainers:
+- name: truefoundry
+name: truefoundry-service-template
+version: 0.0.11

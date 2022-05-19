@@ -1,0 +1,8 @@
+port: 5000
+replicas: 2
+image: ""
+hostUrl: ""
+secretData: "{}"
+managedBy: servicefoundry
+ephemeralStorage: 1Gi
+ephemeralStorageLimit: 1Gi
