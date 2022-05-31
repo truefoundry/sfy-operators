@@ -3,8 +3,4 @@
   version: v1alpha1
   kind: Workspace
   chart: helm-charts/truefoundry-workspace-template
-- group: components.truefoundry.io
-  version: v1alpha1
-  kind: Service
-  chart: helm-charts/truefoundry-service-template
 #+kubebuilder:scaffold:watch
