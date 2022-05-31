@@ -1,3 +1,4 @@
+managedBy: servicefoundry
 dockerHubCreds: dummy
 istioInjection: "enabled"
 resourceQuota:

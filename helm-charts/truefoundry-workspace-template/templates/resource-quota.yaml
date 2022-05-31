@@ -3,6 +3,8 @@ kind: ResourceQuota
 metadata:
   name: tenant-default-quota
   namespace: {{ .Release.Name }}
+  labels:
+    {{- include "app.labels" . | nindent 4 }}
 spec:
   hard:
     limits.cpu: {{ .Values.resourceQuota.limitsCpu }}

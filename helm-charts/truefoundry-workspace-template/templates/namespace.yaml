@@ -3,6 +3,7 @@ kind: Namespace
 metadata:
   name: {{ .Release.Name }}
   labels:
+    {{- include "app.labels" . | nindent 4 }}
     {{- if eq .Values.istioInjection "enabled" }}
     istio-injection: enabled
     {{- end }}

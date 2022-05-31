@@ -3,6 +3,8 @@ kind: NetworkPolicy
 metadata:
   namespace: {{ .Release.Name }}
   name: deny-all-external-egress
+  labels:
+    {{- include "app.labels" . | nindent 4 }}
 spec:
   podSelector:
     matchLabels: {}
