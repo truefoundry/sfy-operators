@@ -1,14 +1,18 @@
 apiVersion: components.truefoundry.io/v1alpha1
 kind: Workspace
 metadata:
-  name: workspace-sample
+  name: workspace-new
+  namespace: sfy-operators-system
 spec:
-  # Default values copied from <project_dir>/helm-charts/truefoundry-workspace-template/values.yaml
-  dockerHubCreds: dummy
-  istioInjection: enabled
-  resourceQuota:
-    limitsCpu: 10
-    limitsMemory: 10Gi
-    services: 10
-  
-  
+  # Default values copied from <project_dir>/helm-charts/truefoundry-workspace/values.yaml
+  truefoundry-workspace-template:
+    enabled: true
+    managedBy: servicefoundry
+    dockerHubCreds: dummy
+    istioInjection: "enabled"
+    resourceQuota:
+      limitsCpu: 10
+      limitsMemory: 10Gi
+      services: 10
+  grafana-tenant:
+    enabled: false
