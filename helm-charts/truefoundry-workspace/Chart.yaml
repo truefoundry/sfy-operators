@@ -1,0 +1,16 @@
+apiVersion: v2
+name: truefoundry-workspace
+version: 0.0.14
+description: "Truefoundry workspace template chart"
+maintainers:
+  - name: truefoundry
+dependencies:
+  - name: truefoundry-workspace-template
+    version: "0.0.14"
+    repository: "https://raw.githubusercontent.com/truefoundry/helm-charts/gh-pages"
+    condition: truefoundry-workspace-template.enabled
+  - name: grafana-tenant
+    version: "0.0.16"
+    repository: "https://raw.githubusercontent.com/truefoundry/helm-charts/gh-pages"
+    condition: grafana-tenant.enabled
+  

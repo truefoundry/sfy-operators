@@ -36,4 +36,6 @@ jobs:
           tags: ${{ env.DOCKER_REPO }}:${{ env.GIT_TAG }}
           cache-from: type=registry,ref=${{ env.DOCKER_REPO }}:buildcache
           cache-to: type=registry,ref=${{ env.DOCKER_REPO }}:buildcache,mode=max
+          build-args:
+            - tfy_github_token: ${{ secrets.TFY_GITHUB_TOKEN }}
       

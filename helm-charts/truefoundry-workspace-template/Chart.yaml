@@ -1,6 +1,0 @@
-apiVersion: v2
-name: truefoundry-workspace-template
-version: 0.0.14
-description: "Truefoundry workspace template chart"
-maintainers:
-  - name: truefoundry
