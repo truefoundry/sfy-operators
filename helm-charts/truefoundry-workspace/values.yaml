@@ -1,11 +1,6 @@
+# https://github.com/truefoundry/helm-charts/blob/main/charts/truefoundry-workspace-template/values.yaml
 truefoundry-workspace-template:
   enabled: true
-  managedBy: servicefoundry
-  dockerHubCreds: dummy
-  istioInjection: "enabled"
-  resourceQuota:
-    limitsCpu: 10
-    limitsMemory: 10Gi
-    services: 10
+# https://github.com/truefoundry/helm-charts/blob/main/charts/grafana-tenant/values.yaml
 grafana-tenant:
   enabled: false
