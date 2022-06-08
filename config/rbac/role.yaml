@@ -79,4 +79,42 @@ rules:
   resources:
   - "*"
 
+##
+## Rules for components.truefoundry.io/v1alpha1, Kind: WorkspaceApplication
+##
+- apiGroups:
+  - components.truefoundry.io
+  resources:
+  - workspaceapplications
+  - workspaceapplications/status
+  - workspaceapplications/finalizers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- verbs:
+  - "*"
+  apiGroups:
+  - ""
+  resources:
+  - "secrets"
+  - "services"
+- verbs:
+  - "*"
+  apiGroups:
+  - "apps"
+  resources:
+  - "deployments"
+- verbs:
+  - "*"
+  apiGroups:
+  - "networking.istio.io"
+  resources:
+  - "gateways"
+  - "virtualservices"
+
 #+kubebuilder:scaffold:rules

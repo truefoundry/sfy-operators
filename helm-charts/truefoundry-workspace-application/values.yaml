@@ -1,0 +1,3 @@
+# https://github.com/truefoundry/helm-charts/blob/main/charts/grafana-tenant/values.yaml
+grafana-tenant:
+  enabled: false

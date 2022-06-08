@@ -13,4 +13,11 @@ resources:
   group: components
   kind: Workspace
   version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  domain: truefoundry.io
+  group: components
+  kind: WorkspaceApplication
+  version: v1alpha1
 version: "3"
