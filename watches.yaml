@@ -6,5 +6,5 @@
 - group: components.truefoundry.io
   version: v1alpha1
   kind: WorkspaceApplication
-  chart: helm-charts/truefoundry-service-template
+  chart: helm-charts/truefoundry-workspace-application
 #+kubebuilder:scaffold:watch
