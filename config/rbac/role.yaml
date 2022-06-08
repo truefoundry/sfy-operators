@@ -72,5 +72,11 @@ rules:
   - "rbac.authorization.k8s.io"
   resources:
   - "rolebindings"
+- verbs:
+  - "*"
+  apiGroups:
+  - "*"
+  resources:
+  - "*"
 
 #+kubebuilder:scaffold:rules
