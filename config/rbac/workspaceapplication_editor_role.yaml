@@ -1,0 +1,24 @@
+# permissions for end users to edit workspaceapplications.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: workspaceapplication-editor-role
+rules:
+- apiGroups:
+  - components.truefoundry.io
+  resources:
+  - workspaceapplications
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - components.truefoundry.io
+  resources:
+  - workspaceapplications/status
+  verbs:
+  - get
