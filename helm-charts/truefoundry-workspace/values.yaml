@@ -1,6 +1,7 @@
 # https://github.com/truefoundry/helm-charts/blob/main/charts/truefoundry-workspace-template/values.yaml
 truefoundry-workspace-template:
   enabled: true
-# https://github.com/truefoundry/helm-charts/blob/main/charts/grafana-tenant/values.yaml
-grafana-tenant:
-  enabled: false
+# Sample applicaiton entry - 
+# - name: application-name
+#   spec: WorkspaceApplicationSpec
+applications: []
