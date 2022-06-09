@@ -1,0 +1,13 @@
+apiVersion: components.truefoundry.io/v1alpha1
+kind: WorkspaceApplication
+metadata:
+  name: grafana-{{ .Release.Name }}
+  namespace: {{ .Release.Name }}
+spec:
+  grafana-tenant:
+    enabled: true
+    PrometheusUrl: http://prometheus-operated.prometheus.svc.cluster.local:9090
+    LokiUrl: http://loki-loki-distributed-query-frontend.loki.svc.cluster.local:3100
+    MimirQueryUrl: http://mimir-query-frontend.mimir.svc.cluster.local:8080/prometheus
+    baseDomain: tfy-dub-euwe1-devtest.devtest.truefoundry.cloud
+  
