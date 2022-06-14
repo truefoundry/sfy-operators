@@ -17,7 +17,7 @@ resources:
 - auth_proxy_role.yaml
 - auth_proxy_role_binding.yaml
 - auth_proxy_client_clusterrole.yaml
-- workspace-editor-role
-- workspace-viewer-role
-- workspaceapplication-editor-role
-- workspaceapplication-viewer-role
+- workspace_editor_role.yaml
+- workspace_viewer_role.yaml
+- workspaceapplication_editor_role.yaml
+- workspaceapplication_viewer_role.yaml
