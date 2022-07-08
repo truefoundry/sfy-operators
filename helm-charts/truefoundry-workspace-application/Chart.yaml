@@ -3,9 +3,9 @@ description: Truefoundry workspace application chart
 maintainers:
 - name: truefoundry
 name: truefoundry-workspace-application
-version: 0.0.15
+version: 0.0.16
 dependencies:
   - name: grafana-tenant
-    version: "0.0.17"
+    version: "0.0.18"
     repository: "https://raw.githubusercontent.com/truefoundry/helm-charts/gh-pages"
     condition: grafana-tenant.enabled
