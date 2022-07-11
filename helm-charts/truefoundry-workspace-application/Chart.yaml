@@ -6,6 +6,6 @@ name: truefoundry-workspace-application
 version: 0.0.17
 dependencies:
   - name: grafana-tenant
-    version: "0.0.19"
+    version: "0.0.20"
     repository: "https://raw.githubusercontent.com/truefoundry/helm-charts/gh-pages"
     condition: grafana-tenant.enabled
