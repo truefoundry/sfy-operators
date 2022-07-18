@@ -1,11 +1,11 @@
 apiVersion: v2
 name: truefoundry-workspace
-version: 0.0.14
+version: 0.0.15
 description: "Truefoundry workspace template chart"
 maintainers:
   - name: truefoundry
 dependencies:
   - name: truefoundry-workspace-template
-    version: "0.0.14"
+    version: "0.0.15"
     repository: "https://raw.githubusercontent.com/truefoundry/helm-charts/gh-pages"
     condition: truefoundry-workspace-template.enabled
